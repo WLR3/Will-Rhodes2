@@ -24,7 +24,17 @@ int main()                                    // Main function
     duration = pulse_in(ECHO_PIN, 1);
     print("%c%c", HOME, CLREOL);
     distance = duration / 148;
-    print("Distanc3e = %d inches\n", distance);
+    print("Distance = %d inches\n", distance);
+    
+    if (distance < 9)
+    {
+      high(15);
+    }      
+    else
+    {
+      low(15);
+    }    
+      
     pause(250);
   }  
 }
